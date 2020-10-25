@@ -4,6 +4,7 @@ var number = 7;
 var guess;
 // create a variable name limit to give user try limit
 var limit = 6;
+var won = false;
 // give the user try of 5 with for loop by creating another variable i to relate with limit.
 for ( i = 1; i < limit; i++) {
 // prompt user for the guess
@@ -13,14 +14,19 @@ for ( i = 1; i < limit; i++) {
 // if correct: let the user know they won
 if (number == guess) {
     document.write("wow!, your guess is corrent You WON")
+    won = true;
     // enter break otherwise loop will run till limit.
     break;
     // if incorrect: let the user know and about remaing tries
 } else {                                                     
-    alert("Your guess is wrong")
-     alert("try again, \nTries remaining " + (limit- i) );
+    
+     alert("Your guess is wrong, Try again. \nTries remaining " + (limit- i) );
     
 }
+}
+if (!won) { 
+    document.write("sorry. You are out of tries. Game Over.")
+    
 }
 
     
