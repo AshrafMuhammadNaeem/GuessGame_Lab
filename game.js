@@ -1,17 +1,17 @@
-// program data:
-var number = 7;
+// create a random number generator :
+var number = Math.floor(Math.random()*100);
 // create variable to store guess number given in for loop code
 var guess;
 // create a variable name limit to give user try limit
 var limit = 6;
+// create variable to store array list of guesese
 var guesses = [];
 var won = false;
-// give the user try of 5 with for loop by creating another variable i to relate with limit.
+// give the user try of 5 with for loop by creating another variable i to relate with limit 
 for ( i = 1; i < limit; i++) {
-// prompt user for the guess
-   guess = window.prompt("Guess the number and enter the number")
+    guess = prompt("Guess a number by entering a number:");
 // if correct: let the user know they won
-if (guess == number) {
+if (number == guess) {
     document.write("wow!, your guess is corrent You WON")
     won = true;
     // enter break otherwise loop will run till limit.
@@ -25,9 +25,19 @@ if (guess == number) {
 } 
 }
 if (!won) { 
-    document.write("sorry. You are out of tries. Game Over.")
+    document.write("Sorry You are out of tries. Game Over. \n Correct number was " + number);
     
 }
+function isPreviousGuess() {
+    for ( var i = 1; i < guesses.length; i++) {
+     if (guesses[i] = guess) {
+        return true;
+     }
+        
+    }
+    return false;
+}
+
 
     
 
