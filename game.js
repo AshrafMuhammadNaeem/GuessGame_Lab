@@ -18,7 +18,7 @@ if (guess == number) {
     break;
     // if incorrect: let the user know and about remaing tries
 } else {   
-       guesses = guesses + guess ;
+    guesses[i] = guess;
     
      alert("Your guess is wrong.  \nYou have guessed:" + guesses.toString() , "\nTries remaining " + (limit- i) );
     
