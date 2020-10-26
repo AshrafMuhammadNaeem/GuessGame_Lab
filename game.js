@@ -25,7 +25,7 @@ if (number == guess) {
 } 
 }
 if (!won) { 
-    document.write("Sorry You are out of tries. Game Over. \n Correct number was " + number);
+    document.write("Sorry You are out of tries. Game Over. <br> Correct number was:"  + number);
     
 }
 function isPreviousGuess() {
