@@ -26,7 +26,7 @@ else if (isPreviousGuess(guess)) {
 }  
  else {   
     guesses[i] = guess;
-    alert("Your guess is wrong.  \nYou have guessed:" + guesses.toString() , "\nTries remaining " + (limit- i) );
+    alert("Your guess is wrong.  \nYou have guessed:" + guesses.toString() + "\nTries remaining " + (limit- i) );
 
 }
 }
